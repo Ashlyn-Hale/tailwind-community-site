@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 </head>
 <body>
   <main>
@@ -206,86 +207,177 @@
         <h2 class="mt-40 mb-20 font-bold text-black text-4xl text-center uppercase underline decoration-amber-500 underline-offset-4 md:text-left md:text-5xl">
           Recent News
         </h2>
-        <div class="mt-4 flex w-full gap-4 pb-5 snap-x overflow-x-auto">
-          <!--First item-->
-          <div class="min-w-[80%] md:min-w-[40%]">
-            <div style="background-image: url('./homepage/construction.png')"
-            class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
-            </div>
-            <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Construction Happening at Mayoral Hall</h4>
-            <h6 class="font-bold text-xl">From July 1st 2025 - Sept 4th 2026</h6>
-            <p>Mayoral Hall is being rennovated to upgrade event spaces</p>
-            <p>for community members. As well as modernizing fire</p>
-            <p>protection systems</p>
+        <div class="flex">
+          <div id="previous" class="text-5xl flex justify-center items-center cursor-pointer p-3 relative -top-8">
+            <i class="fas fa-angle-left"></i>
           </div>
-          <!--Second Item-->
-          <div class="min-w-[80%] md:min-w-[40%]">
-            <div style="background-image: url('./homepage/boat.jpg')"
-            class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
+          <div id="carousel" class="scroll-smooth flex-1 mt-4 flex w-full gap-4 pb-5 snap-x overflow-x-auto">
+            <!--First item-->
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div style="background-image: url('./homepage/construction.png')"
+              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
+              </div>
+              <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Construction Happening at Mayoral Hall</h4>
+              <h6 class="font-bold text-xl">From July 1st 2025 - Sept 4th 2026</h6>
+              <p>Mayoral Hall is being rennovated to upgrade event spaces</p>
+              <p>for community members. As well as modernizing fire</p>
+              <p>protection systems</p>
             </div>
-            <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Get to know Dayton Cove's Boat Transportation Services</h4>
-            <h6 class="font-bold text-xl">March 15th 2026 - March 18th 2026</h6>
-            <p>Dayton Cove's Boat Transportation Services (BTS) is holding</p>
-            <p>classes to teach residents about proper boat safety</p>
-            <p>and driving</p>
+            <!--Second Item-->
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div style="background-image: url('./homepage/boat.jpg')"
+              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
+              </div>
+              <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Get to know Dayton Cove's Boat Transportation Services</h4>
+              <h6 class="font-bold text-xl">March 15th 2026 - March 18th 2026</h6>
+              <p>Dayton Cove's Boat Transportation Services (BTS) is holding</p>
+              <p>classes to teach residents about proper boat safety</p>
+              <p>and driving</p>
+            </div>
+            <!--Third Item-->
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div style="background-image: url('./homepage/ballot.jpg')"
+              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
+              </div>
+              <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Ballot Box Has Moved</h4>
+              <h6 class="font-bold text-xl">Currently located at the southern parking lot</h6>
+              <p>To improve voter experience, Dayton Cove City hall has voted</p>
+              <p>to move the ballot box from the Eastern Plot to the southern</p>
+              <p>parking lot. There will be maps to help guide new voters.</p>
+            </div>
+            <!--Fourth Item-->
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div style="background-image: url('./homepage/picnic.jpg')"
+              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
+              </div>
+              <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Dayton Cove Opens a New Picnic Shelter</h4>
+              <h6 class="font-bold text-xl">Located at Davenport Park </h6>
+              <p>To help bring members of the community together, the city</p>
+              <p>has opened up a new picnic shelter at Davenport Park.</p>
+              <p>Bring friends, family, and other loved ones to gather.</p>
+            </div>
+            <!--Fifth Item-->
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div style="background-image: url('./homepage/traffic.jpg')"
+              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
+              </div>
+              <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Traffic Alert</h4>
+              <h6 class="font-bold text-xl">From Feb 14th 2026</h6>
+              <p>The Breast Cancer Awareness Walk will be happening on</p>
+              <p>Jan 14th. So expect there to be some traffic delays on that date. </p>
+            </div>
+            <!--Sixth-->
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div style="background-image: url('./homepage/awareness.jpg')"
+              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
+              </div>
+              <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Breast Cancer Awareness Walk</h4>
+              <h6 class="font-bold text-xl">Feb 14th 2026 - Springfield Area - All Day</h6>
+              <p>In the Springfield Area of Dayton Cove, there is a Breast Cancer </p>
+              <p>Awareness Walk for all members of the city to participate in.</p>
+              <p>Food and drinks will be provided. All you need to do is show up!</p>
+            </div>
+            <!--Seventh Item-->
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div style="background-image: url('./homepage/debri.jpg')"
+              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
+              </div>
+              <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Volunteers Needed for Jonas River Clean Up.</h4>
+              <h6 class="font-bold text-xl">Feb 10th 2026 - 10 am - 1 pm</h6>
+              <p>The Dayton Cove Clean Up Program needs volunteers to help</p>
+              <p>remove litter across the Jonus River. Food will be provided.</p>
+            </div>
           </div>
-          <!--Third Item-->
-          <div class="min-w-[80%] md:min-w-[40%]">
-            <div style="background-image: url('./homepage/ballot.jpg')"
-            class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
-            </div>
-            <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Ballot Box Has Moved</h4>
-            <h6 class="font-bold text-xl">Currently located at the southern parking lot</h6>
-            <p>To improve voter experience, Dayton Cove City hall has voted</p>
-            <p>to move the ballot box from the Eastern Plot to the southern</p>
-            <p>parking lot. There will be maps to help guide new voters.</p>
-          </div>
-          <!--Fourth Item-->
-          <div class="min-w-[80%] md:min-w-[40%]">
-            <div style="background-image: url('./homepage/picnic.jpg')"
-            class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
-            </div>
-            <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Dayton Cove Opens a New Picnic Shelter</h4>
-            <h6 class="font-bold text-xl">Located at Davenport Park </h6>
-            <p>To help bring members of the community together, the city</p>
-            <p>has opened up a new picnic shelter at Davenport Park.</p>
-            <p>Bring friends, family, and other loved ones to gather.</p>
-          </div>
-          <!--Fifth Item-->
-          <div class="min-w-[80%] md:min-w-[40%]">
-            <div style="background-image: url('./homepage/traffic.jpg')"
-            class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
-            </div>
-            <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Traffic Alert</h4>
-            <h6 class="font-bold text-xl">From Feb 14th 2026</h6>
-            <p>The Breast Cancer Awareness Walk will be happening on</p>
-            <p>Jan 14th. So expect there to be some traffic delays on that date. </p>
-          </div>
-          <!--Sixth-->
-          <div class="min-w-[80%] md:min-w-[40%]">
-            <div style="background-image: url('./homepage/awareness.jpg')"
-            class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
-            </div>
-            <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Breast Cancer Awareness Walk</h4>
-            <h6 class="font-bold text-xl">Feb 14th 2026 - Springfield Area - All Day</h6>
-            <p>In the Springfield Area of Dayton Cove, there is a Breast Cancer </p>
-            <p>Awareness Walk for all members of the city to participate in.</p>
-            <p>Food and drinks will be provided. All you need to do is show up!</p>
-          </div>
-          <!--Seventh Item-->
-          <div class="min-w-[80%] md:min-w-[40%]">
-            <div style="background-image: url('./homepage/debri.jpg')"
-            class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
-            </div>
-            <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Volunteers Needed for Jonas River Clean Up.</h4>
-            <h6 class="font-bold text-xl">Feb 10th 2026 - 10 am - 1 pm</h6>
-            <p>The Dayton Cove Clean Up Program needs volunteers to help</p>
-            <p>remove litter across the Jonus River. Food will be provided.</p>
+          <div id="next" class="text-5xl flex justify-center items-center cursor-pointer p-3 relative -top-8">
+            <i class="fas fa-angle-right"></i>
           </div>
         </div>
-    
       </div>
     </div>
+    <section id="footer">
+      <footer class="bg-black">
+        <div class="conatiner max-w-6xl py-10 mx-auto">
+          <!-- Footer Felx Container -->
+          <div class="flex flex-col items-center mb-8 space-y-6 md:flex-row md:space-y-0 md:justify-between md:items-start">
+            <!-- Menu & Logo Container -->
+            <div class ="flex flex-col items-center space-y-8 md:items-start md:space-y-4">
+              <!-- Logo -->
+              <div class="h-8">
+                <img src="./homepage/textlogo.png" alt="footer logo" class="w-44 md:ml-3">
+              </div>
+              <!-- Menu Container -->
+              <div class="flex flex-col items-center space-y-4 font-bold text-white md:flex-row md:space-y-0 md:space-x-6 md:ml-3">
+              <!-- Item 1 -->
+              <div class="h-10 group inline-block">
+                <a href="#">About</a>
+                <div class="group-hover:border-b group-hover:border-blue-50 border-transparent"></div>
+              </div>
+              <!-- Item 2 -->
+              <div class="h-10 group inline-block">
+                <a href="#">Jobs</a>
+                <div class="group-hover:border-b group-hover:border-blue-50 border-transparent"></div>
+              </div>
+              <!-- Item 3 -->
+              <div class="h-10 group inline-block">
+                <a href="#">Events</a>
+                <div class="group-hover:border-b group-hover:border-blue-50 border-transparent"></div>
+              </div>
+              <!-- Item 4 -->
+              <div class="h-10 group inline-block">
+                <a href="#">Tourism</a>
+                <div class="group-hover:border-b group-hover:border-blue-50 border-transparent"></div>
+              </div>
+              <!-- Item 5 -->
+              <div class="h-10 group inline-block">
+                <a href="#">Support</a>
+                <div class="group-hover:border-b group-hover:border-blue-50 border-transparent"></div>
+              </div>
+              </div>
+            </div>
+            <!-- Social & Copy Container -->
+            <div class="flex flex-col items-start justify-between space-y-4 text-gray-500">
+              <!-- Icons Container -->
+               <div class="flex items-center justify-center mx:auto space-x-4 md:justify-end mx:0">
+                <!-- Icon 1 Facebook -->
+                 <div class="h-8 group">
+                  <a href="#">
+                    <img src="./homepage/facebook.png" alt="" class="h-6"/>
+                  </a>
+                 </div>
+                 <!-- Icon 2 Instagram -->
+                 <div class="h-8 group">
+                  <a href="#">
+                    <img src="./homepage/instagram.png" alt="" class="h-6"/>
+                  </a>
+                 </div>
+                 <!-- Icon 3 Pinterest -->
+                 <div class="h-8 group">
+                  <a href="#">
+                    <img src="./homepage/pinterest.png" alt="" class="h-6"/>
+                  </a>
+                 </div>
+               </div>
+               <div class="font-bold" >
+                &copy; 2026 Dayton Cove. All Rights Reserved
+               </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
   </main>
+  <script defer>
+    const previousButton = document.getElementById("previous");
+    const nextButton = document.getElementById("next");
+    const carousel = document.getElementById("carousel");
+    nextButton.addEventListener("click", () => {
+      const itemWidth = carousel.getElementsByTagName("div")[0].clientWidth;
+      carousel.scrollLeft = carousel.scrollLeft + itemWidth;
+    })
+    previousButton.addEventListener("click", () => {
+      const itemWidth = carousel.getElementsByTagName("div")[0].clientWidth;
+      carousel.scrollLeft = carousel.scrollLeft - itemWidth;
+    })
+  </script>
 </body>
 </html>
