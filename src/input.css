@@ -54,4 +54,20 @@
     @apply absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b 
     from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70;
   }
+
+  .menu-item {
+    @apply relative flex h-full items-center p-7 cursor-pointer font-bold hover:text-zinc-200 hover:bg-white/20 transition-colors ease-in-out
+  }
+
+}
+
+@custom-variant group-open {
+  &:is(:where(.group):is(.open, [open], :popover-open, :open) *) {
+    @slot;
+  }
+}
+@custom-variant peer-open {
+  &:is(:where(.peer):is(.open, [open], :popover-open, :open) ~ *) {
+    @slot;
+  }
 }

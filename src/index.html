@@ -5,17 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/dist/output.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <script>
+    window.onload = () => {
+      const mobileMenuIcon = document.getElementById("mobile-menu-button");
+      mobileMenuIcon.addEventListener("click", () => {
+        if (mobileMenuIcon.classList.contains("open")) {
+          mobileMenuIcon.classList.remove("open");
+        }else{
+          mobileMenuIcon.classList.add("open");
+        }
+      });
+
+      const ticketsMenuItem = document.getElementById("ticket-menu-item");
+      ticketsMenuItem.addEventListener("click", () => {
+        if (ticketsMenuItem.classList.contains("open")) {
+          ticketsMenuItem.classList.remove("open");
+        }else{
+          ticketsMenuItem.classList.add("open");
+        }
+      });
+    };
+  </script>
 </head>
 <body>
   <main>
     <div class="bg-white">
-      <nav class="sticky flex top-0 bg-black z-50">
+      <nav class="sticky flex top-0 bg-black z-50 text-white">
         <div class="flex items-center p-2 gap-2 h-20">
           <img src="./homepage/logo.png" width="50"/>
-          <div class="font-bold text-2xl text-white">
+          <div class="font-bold text-2xl">
             Dayton Cove 
           </div>
         </div>
+        <!--Mobile Navigation-->
+        <div class="block lg:hidden ml-auto pr-4 my-auto">
+          <button id="mobile-menu-button" class="group cursor-pointer peer">
+            <div class="top-0 bg-zinc-200 rounded-full w-8 h-1 group-open:rotate-45 transition-all group-open:top-2 relative"></div>
+            <div class="transition-all opacity-100 group-open:opacity-0 bg-zinc-200 rounded-full w-8 h-1 mt-1"></div>
+            <div class="top-0 transition-all group-open:-rotate-45 bg-zinc-200 rounded-full w-8 h-1 mt-1 group-open:-top-2 relative"></div>
+          </button>
+          <div class="absolute bg-gradient-to-b from-black to-black/90 w-full left-0 top-20 peer-open:block hidden">
+            <div class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-white hover:text-zinc-200 transition-colors hover:bg-white/10">
+              <span>Home</span>
+            </div>
+            <div class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-white hover:text-zinc-200 transition-colors hover:bg-white/10">
+              <span>Events</span>
+            </div>
+            <div class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-white hover:text-zinc-200 transition-colors hover:bg-white/10">
+              <span>Tourism</span>
+            </div>
+            <div class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-white hover:text-zinc-200 transition-colors hover:bg-white/10">
+              <span>Government</span>
+            </div>
+            <div id="ticket-menu-item"
+            class="group relative h-full cursor-pointer text-white hover:text-zinc-200 transition-colors hover:bg-white/10">
+              <div class="p-4 text-center font-bold">Services</div>
+              <div class="hidden group-open:block">
+                <div class="relative text-white hover:text-zinc-200 hover:bg-white/5 transition-colors ease-in-out text-center p-4 ">
+                  <span>Non-Profits</span>
+                </div>
+                <div class="relative text-white hover:text-zinc-200 hover:bg-white/5 transition-colors ease-in-out text-center p-4 ">
+                  <span>Benefit Programs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Desktop Navigation-->
+        <!--Home-->
+        <div class="hidden flex-1 lg:flex items-center justify-end ">
+          <div class="animated-underline relative flex h-full items-center p-7 cursor-pointer font-bold hover:text-zinc-200 hover:bg-white/20 transition-colors ease-in-out">
+            <span>Home</span>
+          </div>
+        <!--Events-->
+          <div class="animated-underline menu-item">
+            <span>Events</span>
+          </div>
+        <!--Tourism-->
+          <div class="animated-underline menu-item">
+            <span>Tourism</span>
+          </div>
+        <!--Government-->
+          <div class="animated-underline menu-item">
+            <span>Government</span>
+          </div>
+        <!--Services-->
+        <div class="menu-item group animated-underline">
+          <span>Services</span>
+          <div class="hidden group-hover:block bg-black absolute top-full right-0 whitespace-nowrap rounded-b-md text-right">
+            <div class="p-4 font-bold hover:bg-white/15 hover:text-zinc-200 text-white transition-colors ease-in-out cursor-pointer">
+              <span>Non-Profits</span>
+            </div>
+            <div class="p-4 font-bold hover:bg-white/15 hover:text-zinc-200 text-white transition-colors ease-in-out cursor-pointer">
+              <span>Benefit Programs</span>
+            </div>
+          </div>
+        </div>
+        <!--About Us-->
+        <div class="animated-underline menu-item">
+          <span>About Us</span>
+        </div>
+      </div>
     </nav>
     <!--start of header-->
     <header>
@@ -223,9 +313,7 @@
               </div>
               <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Construction Happening at Mayoral Hall</h4>
               <h6 class="font-bold text-xl">From July 1st 2025 - Sept 4th 2026</h6>
-              <p>Mayoral Hall is being rennovated to upgrade event spaces</p>
-              <p>for community members. As well as modernizing fire</p>
-              <p>protection systems</p>
+              <p>Mayoral Hall is being rennovated to upgrade event spaces for community members. As well as modernizing fire protection systems.</p>
             </div>
             <!--Second Item-->
             <div class="min-w-[80%] md:min-w-[40%]">
@@ -234,9 +322,7 @@
               </div>
               <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Get to know Dayton Cove's Boat Transportation Services</h4>
               <h6 class="font-bold text-xl">March 15th 2026 - March 18th 2026</h6>
-              <p>Dayton Cove's Boat Transportation Services (BTS) is holding</p>
-              <p>classes to teach residents about proper boat safety</p>
-              <p>and driving</p>
+              <p>Dayton Cove's Boat Transportation Services (BTS) is holding classes to teach residents about proper boat safety and driving.</p>
             </div>
             <!--Third Item-->
             <div class="min-w-[80%] md:min-w-[40%]">
@@ -245,9 +331,7 @@
               </div>
               <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Ballot Box Has Moved</h4>
               <h6 class="font-bold text-xl">Currently located at the southern parking lot</h6>
-              <p>To improve voter experience, Dayton Cove City hall has voted</p>
-              <p>to move the ballot box from the Eastern Plot to the southern</p>
-              <p>parking lot. There will be maps to help guide new voters.</p>
+              <p>To improve voter experience, Dayton Cove City hall has voted to move the ballot box from the Eastern Plot to the southern parking lot. There will be maps to help guide new voters.</p>
             </div>
             <!--Fourth Item-->
             <div class="min-w-[80%] md:min-w-[40%]">
@@ -256,9 +340,7 @@
               </div>
               <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Dayton Cove Opens a New Picnic Shelter</h4>
               <h6 class="font-bold text-xl">Located at Davenport Park </h6>
-              <p>To help bring members of the community together, the city</p>
-              <p>has opened up a new picnic shelter at Davenport Park.</p>
-              <p>Bring friends, family, and other loved ones to gather.</p>
+              <p>To help bring members of the community together, the city has opened up a new picnic shelter at Davenport Park. Bring friends, family, and other loved ones to gather.</p>
             </div>
             <!--Fifth Item-->
             <div class="min-w-[80%] md:min-w-[40%]">
@@ -267,8 +349,7 @@
               </div>
               <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Traffic Alert</h4>
               <h6 class="font-bold text-xl">Feb 14th 2026</h6>
-              <p>The Breast Cancer Awareness Walk will be happening on</p>
-              <p>Jan 14th. So expect there to be some traffic delays on that date. </p>
+              <p>The Breast Cancer Awareness Walk will be happening on Jan 14th. So expect there to be some traffic delays on that date.</p>
             </div>
             <!--Sixth-->
             <div class="min-w-[80%] md:min-w-[40%]">
@@ -277,9 +358,7 @@
               </div>
               <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Breast Cancer Awareness Walk</h4>
               <h6 class="font-bold text-xl">Feb 14th 2026 - Springfield Area - All Day</h6>
-              <p>In the Springfield Area of Dayton Cove, there is a Breast Cancer </p>
-              <p>Awareness Walk for all members of the city to participate in.</p>
-              <p>Food and drinks will be provided. All you need to do is show up!</p>
+              <p>In the Springfield Area of Dayton Cove, there is a Breast Cancer Awareness Walk for all members of the city to participate in. Food and drinks will be provided. All you need to do is show up!</p>
             </div>
             <!--Seventh Item-->
             <div class="min-w-[80%] md:min-w-[40%]">
@@ -288,8 +367,7 @@
               </div>
               <h4 class="font-bold mt-2 text-2xl underline decoration-amber-500 underline-offset-4">Volunteers Needed for Jonas River Clean Up.</h4>
               <h6 class="font-bold text-xl">Feb 10th 2026 - 10 am - 1 pm</h6>
-              <p>The Dayton Cove Clean Up Program needs volunteers to help</p>
-              <p>remove litter across the Jonus River. Food will be provided.</p>
+              <p>The Dayton Cove Clean Up Program needs volunteers to help remove litter across the Jonus River. Lunch will be provided.</p>
             </div>
           </div>
           <div id="next" class="text-5xl flex justify-center items-center cursor-pointer p-3 relative -top-8">
@@ -314,27 +392,27 @@
               <!-- Item 1 -->
               <div class="h-10 group inline-block">
                 <a href="#">About</a>
-                <div class="group-hover:border-b group-hover:border-blue-50 border-transparent"></div>
+                <div class="group-hover:border-b group-hover:border-amber-500 border-transparent"></div>
               </div>
               <!-- Item 2 -->
               <div class="h-10 group inline-block">
                 <a href="#">Jobs</a>
-                <div class="group-hover:border-b group-hover:border-blue-50 border-transparent"></div>
+                <div class="group-hover:border-b group-hover:border-amber-500 border-transparent"></div>
               </div>
               <!-- Item 3 -->
               <div class="h-10 group inline-block">
                 <a href="#">Events</a>
-                <div class="group-hover:border-b group-hover:border-blue-50 border-transparent"></div>
+                <div class="group-hover:border-b group-hover:border-amber-500 border-transparent"></div>
               </div>
               <!-- Item 4 -->
               <div class="h-10 group inline-block">
                 <a href="#">Tourism</a>
-                <div class="group-hover:border-b group-hover:border-blue-50 border-transparent"></div>
+                <div class="group-hover:border-b group-hover:border-amber-500 border-transparent"></div>
               </div>
               <!-- Item 5 -->
               <div class="h-10 group inline-block">
                 <a href="#">Support</a>
-                <div class="group-hover:border-b group-hover:border-blue-50 border-transparent"></div>
+                <div class="group-hover:border-b group-hover:border-amber-500 border-transparent"></div>
               </div>
               </div>
             </div>
